@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이효정 | 자기소개</title>
+<style>
+  :root {
+    color-scheme: light;
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    color: #392720;
+    background: #fff8e9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: clamp(16px, 5vw, 64px);
+    background:
+      radial-gradient(ellipse at 5% 12%, #ffdfae, transparent 50%),
+      radial-gradient(ellipse at 95% 90%, #ffded9, transparent 45%),
+      #fff8e9;
+  }
+  .profile {
+    width: min(100%, 880px);
+    padding: clamp(10px, 2vw, 17px);
+    border: 1px solid #fff;
+    border-radius: 40px;
+    background: #fffefa;
+    box-shadow: 0 24px 70px #8f4e241a;
+  }
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 345px;
+    padding: clamp(28px, 7vw, 75px);
+    border-radius: 29px;
+    background: #ffd58e;
+  }
+  .greeting { margin: 0 0 8px; font-size: clamp(17px, 2.5vw, 23px); font-weight: 650; }
+  h1 { margin: 0; font-size: clamp(56px, 10vw, 105px); line-height: 1.1; letter-spacing: -.08em; }
+  .art { position: absolute; z-index: -1; inset: 0; pointer-events: none; }
+  .flower {
+    --petal: #ffae9b;
+    --center: #ff835f;
+    position: absolute;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transform: rotate(var(--angle));
+    background:
+      radial-gradient(circle, var(--center) 0 16%, transparent 17%),
+      radial-gradient(circle at 50% 24%, var(--petal) 0 23%, transparent 24%),
+      radial-gradient(circle at 75% 42%, var(--petal) 0 23%, transparent 24%),
+      radial-gradient(circle at 65% 71%, var(--petal) 0 23%, transparent 24%),
+      radial-gradient(circle at 35% 71%, var(--petal) 0 23%, transparent 24%),
+      radial-gradient(circle at 25% 42%, var(--petal) 0 23%, transparent 24%);
+  }
+  .peach { --size: clamp(200px, 34vw, 345px); --angle: -14deg; right: -5%; bottom: -29%; }
+  .cream { --size: clamp(96px, 17vw, 163px); --angle: 13deg; --petal: #fff2ce; --center: #ffa554; right: 24%; top: 8%; }
+  .dot { position: absolute; border-radius: 50%; background: #fff2ce; width: 17px; aspect-ratio: 1; right: 11%; top: 15%; }
+  dl {
+    display: grid;
+    grid-template-columns: .75fr 1.45fr 1.45fr .75fr;
+    gap: 10px;
+    margin: 10px 0 0;
+  }
+  .fact { padding: 23px 10px; text-align: center; border-radius: 24px; background: #fff2d7; }
+  .fact:nth-child(even) { background: #ffe8df; }
+  dt { font-size: .87rem; color: #725044; margin-bottom: 6px; }
+  dd { margin: 0; font-size: clamp(1rem, 2.8vw, 1.3rem); font-weight: 750; }
+  @media (max-width: 560px) {
+    .hero { min-height: 282px; }
+    .cream { right: 14%; }
+    .peach { right: -12%; }
+    .dot { right: 6%; top: 35%; width: 11px; }
+    dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact { padding: 15px 8px; }
+  }
+</style>
+</head>
+<body>
+<main class="profile">
+  <header class="hero">
+    <div class="art" aria-hidden="true">
+      <span class="flower peach"></span>
+      <span class="flower cream"></span>
+      <span class="dot"></span>
+    </div>
+    <div>
+      <p class="greeting">안녕하세요, 저는</p>
+      <h1>이효정</h1>
+    </div>
+  </header>
+  <dl>
+    <div class="fact"><dt>나이</dt><dd>23세</dd></div>
+    <div class="fact"><dt>학교</dt><dd>제주대학교</dd></div>
+    <div class="fact"><dt>전공</dt><dd>사학과</dd></div>
+    <div class="fact"><dt>학년</dt><dd>2학년</dd></div>
+  </dl>
+</main>
+</body>
+</html>
